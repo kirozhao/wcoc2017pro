@@ -8,7 +8,13 @@ import tornado.web
 from tornado.ioloop import IOLoop
 from tornado.tcpserver import TCPServer
 
+from tornado.options import options, define
+
 import struct
+
+define("address", default='127.0.0.1', type=str)
+tornado.options.parse_command_line()
+
 
 path = lambda root, *a: os.path.join(root, *a)
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -110,10 +116,10 @@ class ProxyServer(TCPServer):
 
 if __name__ == "__main__":
     app = Application()
-    app.listen(port=8000, address='127.0.0.1')
+    app.listen(port=8000, address=options.address)
 
     proxy = ProxyServer()
-    proxy.listen(port=8001, address='127.0.0.1')
+    proxy.listen(port=8001, address=options.address)
 
     print "start demo server"
     IOLoop.current().start()
