@@ -2,14 +2,10 @@ package wechat.wcoc2017pro;
 
 import com.tencent.mars.sample.wrapper.service.MarsServiceProfile;
 
-/**
- *
- * Created by kirozhao on 2016/12/25.
- */
 
 public class DemoMarsServiceProfile implements MarsServiceProfile {
 
-//    public static final String SERVER_HOST = "localhost";
+    // public static final String SERVER_HOST = "localhost";
     public static final String SERVER_HOST = "wcoc2017pro.wemobiledev.info";
 
     @Override

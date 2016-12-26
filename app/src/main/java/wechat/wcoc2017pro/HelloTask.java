@@ -5,11 +5,7 @@ import com.tencent.mars.sample.wrapper.TaskProperty;
 import com.tencent.mars.sample.wrapper.remote.JsonMarsTaskWrapper;
 
 
-/**
- * Created by kirozhao on 2016/12/25.
- */
-
-@TaskProperty(host=DemoMarsServiceProfile.SERVER_HOST, path = "/hello")
+@TaskProperty(host = DemoMarsServiceProfile.SERVER_HOST, path = "/hello")
 public class HelloTask extends JsonMarsTaskWrapper {
 
     private OnTaskFinishCallback onTaskFinishCallback;
