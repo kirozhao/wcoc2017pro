@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         visitTextView = (TextView) findViewById(R.id.text_visit);
         bannerTextView = (TextView) findViewById(R.id.text_banner);
         startStopButton = (Button) findViewById(R.id.btn_start_stop);
-        startStopButton.setText(isPause ? "START": "PAUSE");
+        startStopButton.setText(isPause ? "START" : "PAUSE");
         startStopButton.setOnClickListener(new Button.OnClickListener() {
             @Override
             public void onClick(View view) {
                 isPause = !isPause;
-                startStopButton.setText(isPause ? "START": "PAUSE");
+                startStopButton.setText(isPause ? "START" : "PAUSE");
             }
         });
 
@@ -87,14 +87,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
 
-        // MarsServiceProxy.setForegroundMode(true);
+        MarsServiceProxy.inst.setForeground(true);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
 
-        // MarsServiceProxy.setForegroundMode(false);
+        MarsServiceProxy.inst.setForeground(false);
     }
 
     @Override
