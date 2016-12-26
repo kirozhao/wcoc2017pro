@@ -11,7 +11,27 @@
     tools:context="wechat.wcoc2017pro.MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/text_count"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Hello Mars!!"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif-condensed" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_visit"
+        android:textSize="150sp"
+        android:text="0"
+        android:fontFamily="casual"
+        android:textAlignment="center"
+        android:layout_below="@+id/text_count"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="42dp" />
 </RelativeLayout>
