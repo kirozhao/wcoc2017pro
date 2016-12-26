@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         visitTextView = (TextView) findViewById(R.id.text_visit);
-        bannerTextView = (TextView) findViewById(R.id.text_count);
+        bannerTextView = (TextView) findViewById(R.id.text_banner);
         bannerTextView.setClickable(true);
         bannerTextView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
-        // Hello ?
-        MarsServiceProxy.send(task);
     }
 
     @Override

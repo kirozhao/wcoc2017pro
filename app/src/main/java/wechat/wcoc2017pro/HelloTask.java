@@ -20,7 +20,7 @@ public class HelloTask extends JsonMarsTaskWrapper {
 
     @Override
     public void onPreEncode(JsonObject request) {
-        request.addProperty("user", "kiro");
+        request.addProperty("user", "guest");
         request.addProperty("says", "hello mars server!!");
     }
 
