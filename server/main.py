@@ -33,6 +33,7 @@ class HelloHandler(tornado.web.RequestHandler):
         pass
 
     def post(self):
+        ScanHandler.visit_count = 0
         data = tornado.escape.json_decode(self.request.body)
         print data
         self.write(tornado.escape.json_encode({
